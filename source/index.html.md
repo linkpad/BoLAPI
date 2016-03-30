@@ -24,6 +24,6 @@ search: true
 # Introduction
 
 
-Welcome to the BoL Studio API ! This documentation is made by hands. If you want to add more documentation look at the [github project](https://github.com/linkpad/BoLAPI).
+Welcome to the BoL Studio API ! This documentation is made by hands. If you want to add more documentation look at the [github project](https://github.com/linkpad/BoLAPI). The documentation is not full at the moment.
 
 You can view code examples in the dark area to the right.
