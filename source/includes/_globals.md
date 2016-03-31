@@ -145,3 +145,17 @@ end
 * updates WINDOW_[X/Y/W/H]
 
 `UpdateWindow()`
+
+## D3DXVECTOR3
+
+* Create a D3DXVECTOR3 object 
+* 
+`D3DXVECTOR3(x, y, z)`
+
+## WorldToScreen
+
+* Return screen position based on ingame coordinates
+
+`WorldToScreen(D3DXVECTOR3)`
+
+
