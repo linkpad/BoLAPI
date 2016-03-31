@@ -11,3 +11,9 @@
 * Release the sprite
 
 `sprite:Release()`
+
+## sprite:SetScale
+
+* Scale the sprite
+
+`sprite:SetScale(x, y,)`
