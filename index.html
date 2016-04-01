@@ -156,6 +156,16 @@
 <span class="k">end</span>
 </code></pre>
 
+<h2 id="onreset">OnReset</h2>
+
+<ul>
+<li>Called every draw reset.</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnReset</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnReset works"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
 <h2 id="ontick">OnTick</h2>
 
 <ul>
@@ -213,6 +223,136 @@
 </ul>
 <pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnSendChat</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">"OnSendChat works - user wrote : "</span> <span class="o">..</span> <span class="n">text</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onrecvchat">OnRecvChat</h2>
+
+<ul>
+<li>Called when user send recv chat.</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnRecvChat</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnRecvChat works - "</span> <span class="o">..</span> <span class="n">unit</span><span class="p">.</span><span class="n">charName</span> <span class="o">..</span> <span class="s2">" wrote : "</span> <span class="o">..</span> <span class="n">text</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onsendpacket">OnSendPacket</h2>
+
+<ul>
+<li>Called when user send a packet</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnSendPacket</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnSendPacket works"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onrecvpacket">OnRecvPacket</h2>
+
+<ul>
+<li>Called when user recv a packet</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnRecvPacket</span><span class="p">(</span><span class="n">packet</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnRecvPacket works"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onbugsplat">OnBugSplat</h2>
+
+<ul>
+<li>Called when user bugsplat</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnBugSplat</span><span class="p">()</span>
+
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onanimation">OnAnimation</h2>
+
+<ul>
+<li>Called when a unit does an animation</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnAnimation</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="n">animation</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnAnimation works: Unit "</span> <span class="o">..</span> <span class="n">unit</span><span class="p">.</span><span class="n">charName</span> <span class="o">..</span> <span class="s2">" did "</span> <span class="o">..</span> <span class="n">animation</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onapplyparticle">OnApplyParticle</h2>
+
+<ul>
+<li>Called when a particle apply to a unit</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnApplyParticle</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="n">particle</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnApplyParticle works: Unit "</span> <span class="o">..</span> <span class="n">unit</span><span class="p">.</span><span class="n">charName</span> <span class="o">..</span> <span class="s2">" got "</span> <span class="o">..</span> <span class="n">particle</span><span class="p">.</span><span class="n">charName</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onnotifyevent">OnNotifyEvent</h2>
+
+<ul>
+<li>Called on event</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnNotifyEvent</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnNotifyEvent "</span> <span class="o">..</span> <span class="n">unit</span><span class="p">.</span><span class="n">charName</span> <span class="o">..</span> <span class="s2">" -&gt; "</span> <span class="o">..</span> <span class="n">event</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onnewpath">OnNewPath</h2>
+
+<ul>
+<li>Called on new path</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnNewPath</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="n">startPos</span><span class="p">,</span> <span class="n">endPos</span><span class="p">,</span> <span class="n">isDash</span><span class="p">,</span> <span class="n">fSpeed</span><span class="p">,</span> <span class="n">fGravity</span><span class="p">,</span> <span class="n">fDistance</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnNewPath works"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onissueorder">OnIssueOrder</h2>
+
+<ul>
+<li>Called on IssueOrder</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnIssueOrder</span><span class="p">(</span><span class="n">unit</span><span class="p">,</span> <span class="n">iAction</span><span class="p">,</span> <span class="n">targetPos</span><span class="p">,</span> <span class="n">Target</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnIssueOrder works"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="oncastspell">OnCastSpell</h2>
+
+<ul>
+<li>Called on CastSpell</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnCastSpell</span><span class="p">(</span><span class="n">iSpell</span><span class="p">,</span> <span class="n">startPos</span><span class="p">,</span> <span class="n">endPos</span><span class="p">,</span> <span class="n">Target</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnCastSpell works"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onapplybuff">OnApplyBuff</h2>
+
+<ul>
+<li>Called on ApplyBuff</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnApplyBuff</span><span class="p">(</span><span class="n">Src</span><span class="p">,</span> <span class="n">Target</span><span class="p">,</span> <span class="n">Buff</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnApplyBuff works"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onupdatebuff">OnUpdateBuff</h2>
+
+<ul>
+<li>Called on UpdateBuff</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnUpdateBuff</span><span class="p">(</span><span class="n">Src</span><span class="p">,</span> <span class="n">Buff</span><span class="p">,</span> <span class="n">iStacks</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnUpdateBuff works"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="onremovebuff">OnRemoveBuff</h2>
+
+<ul>
+<li>Called on RemoveBuff</li>
+</ul>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnRemoveBuff</span><span class="p">(</span><span class="n">Src</span><span class="p">,</span> <span class="n">Buff</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"OnRemoveBuff works"</span><span class="p">)</span>
 <span class="k">end</span>
 </code></pre>
 
