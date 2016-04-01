@@ -404,6 +404,14 @@
 
 <p><code class="prettyprint">LevelSpell(iSpell)</code></p>
 
+<h2 id="print">print</h2>
+
+<ul>
+<li>Print text to chat (local only)</li>
+</ul>
+
+<p><code class="prettyprint">print(text)</code></p>
+
 <h2 id="printchat">PrintChat</h2>
 
 <ul>
@@ -512,6 +520,141 @@
 
 <p><code class="prettyprint">GetCursorPos()</code></p>
 
+<h2 id="getdistancesqr">GetDistanceSqr</h2>
+
+<ul>
+<li>Return the distance^2</li>
+</ul>
+
+<p><code class="prettyprint">GetDistanceSqr(p1, p2)</code></p>
+
+<aside class="notice">Faster than <code>GetDistance(p1, p2)</code> for comparison of distances</aside>
+
+<h2 id="getdistance">GetDistance</h2>
+
+<ul>
+<li>Return the distance</li>
+</ul>
+
+<p><code class="prettyprint">GetDistance(p1, p2)</code></p>
+
+<h2 id="getenemyheroes">GetEnemyHeroes</h2>
+
+<ul>
+<li>Return all enemy heroes in a table</li>
+</ul>
+
+<p><code class="prettyprint">GetEnemyHeroes()</code></p>
+
+<h2 id="getallyheroes">GetAllyHeroes</h2>
+
+<ul>
+<li>Return all ally heroes in a table</li>
+</ul>
+
+<p><code class="prettyprint">GetAllyHeroes()</code></p>
+
+<h2 id="getsave">GetSave</h2>
+
+<ul>
+<li>used to save data between matches. It can save all data except userdata, even functions !</li>
+</ul>
+
+<p><code class="prettyprint">GetSave(name)</code></p>
+<pre class="highlight lua"><code>    <span class="n">GetSave</span><span class="p">(</span><span class="s2">"mySave"</span><span class="p">).</span><span class="nb">print</span> <span class="o">=</span> <span class="nb">print</span>
+    <span class="c1">--&gt; nextGame (Or reload)</span>
+    <span class="n">GetSave</span><span class="p">(</span><span class="s2">"mySave"</span><span class="p">).</span><span class="nb">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+</code></pre>
+
+<h2 id="createdirectory">CreateDirectory</h2>
+
+<ul>
+<li>Create a directory and return true or false, only works if the folder doesn&rsquo;t already exist</li>
+</ul>
+
+<p><code class="prettyprint">CreateDirectory(path)</code></p>
+
+<h2 id="directoryexist">DirectoryExist</h2>
+
+<ul>
+<li>Check if a directory exist and return true or false</li>
+</ul>
+
+<p><code class="prettyprint">DirectoryExist(path)</code></p>
+
+<h2 id="readfile">ReadFile</h2>
+
+<ul>
+<li>Return text of a file</li>
+</ul>
+
+<p><code class="prettyprint">ReadFile(path)</code></p>
+
+<h2 id="writefile">WriteFile</h2>
+
+<ul>
+<li>Return true if could write to file; mode is optional</li>
+</ul>
+
+<p><code class="prettyprint">WriteFile(text, path, mode)</code></p>
+
+<h2 id="fileexist">FileExist</h2>
+
+<ul>
+<li>Return true if file exists</li>
+</ul>
+
+<p><code class="prettyprint">FileExist(path)</code></p>
+
+<h2 id="deletefile">DeleteFile</h2>
+
+<ul>
+<li>Return true if file is succesfully deleted</li>
+</ul>
+
+<p><code class="prettyprint">DeleteFile(path)</code></p>
+
+<h2 id="getfilesize">GetFileSize</h2>
+
+<ul>
+<li>Return the size of a file</li>
+</ul>
+
+<p><code class="prettyprint">GetFileSize(path)</code></p>
+
+<h2 id="delayaction">DelayAction</h2>
+
+<ul>
+<li>Delays a function call</li>
+<li>Delay is in seconds</li>
+</ul>
+
+<p><code class="prettyprint">DelayAction(func, delay, args)</code></p>
+
+<h2 id="enableoverlay">EnableOverlay</h2>
+
+<ul>
+<li>Enable overlay</li>
+</ul>
+
+<p><code class="prettyprint">EnableOverlay()</code></p>
+
+<h2 id="disableoverlay">DisableOverlay</h2>
+
+<ul>
+<li>Disable overlay</li>
+</ul>
+
+<p><code class="prettyprint">DisableOverlay()</code></p>
+
+<h2 id="cursorisunder">CursorIsUnder</h2>
+
+<ul>
+<li>return if cursor is under a rectangle</li>
+</ul>
+
+<p><code class="prettyprint">CursorIsUnder(x, y, sizeX, sizeY)</code></p>
+
 <h2 id="createsprite">createSprite</h2>
 
 <ul>
@@ -544,6 +687,39 @@
 </ul>
 
 <p><code class="prettyprint">WorldToScreen(D3DXVECTOR3)</code></p>
+
+<h2 id="validtarget">ValidTarget</h2>
+
+<ul>
+<li>Return true if the target is valid</li>
+</ul>
+
+<p><code class="prettyprint">ValidTarget(object, distance, enemyTeam)</code></p>
+
+<h2 id="buffisvalid">BuffIsValid</h2>
+
+<ul>
+<li>Return true if the buff is valid</li>
+</ul>
+
+<p><code class="prettyprint">BuffIsValid(buff)</code></p>
+
+<h2 id="targethavebuff">TargetHaveBuff</h2>
+
+<ul>
+<li>Return if target have buff</li>
+</ul>
+
+<p><code class="prettyprint">TargetHaveBuff(buffName, target)</code></p>
+
+<h2 id="countenemyheroinrange">CountEnemyHeroInRange</h2>
+
+<ul>
+<li>return number of enemy in range</li>
+<li>object is optional</li>
+</ul>
+
+<p><code class="prettyprint">CountEnemyHeroInRange(range, object)</code></p>
 
           <h1 id="unit-members">Unit Members</h1>
 
