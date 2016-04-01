@@ -1,5 +1,6 @@
 # Globals Functions
 
+
 ## IsKeyPressed
 
 * Return true/false if key was pressed
@@ -41,6 +42,12 @@ Uses Spell or Item at Target Position :
 * Level Up a Spell
 
 `LevelSpell(iSpell)`
+
+## print
+
+* Print text to chat (local only)
+
+`print(text)`
 
 ## PrintChat
 
@@ -132,6 +139,110 @@ end
 
 `GetCursorPos()`
 
+## GetDistanceSqr
+
+* Return the distance^2
+
+`GetDistanceSqr(p1, p2)`
+
+<aside class="notice">Faster than <code>GetDistance(p1, p2)</code> for comparison of distances</aside>
+
+## GetDistance
+
+* Return the distance
+
+`GetDistance(p1, p2)`
+
+## GetEnemyHeroes
+
+* Return all enemy heroes in a table
+
+`GetEnemyHeroes()`
+
+## GetAllyHeroes
+
+* Return all ally heroes in a table
+
+`GetAllyHeroes()`
+
+## GetSave
+
+* used to save data between matches. It can save all data except userdata, even functions !
+
+`GetSave(name)`
+
+``` lua
+	GetSave("mySave").print = print
+	--> nextGame (Or reload)
+	GetSave("mySave").print("Hello")
+```
+
+## CreateDirectory
+
+* Create a directory and return true or false, only works if the folder doesn't already exist
+
+`CreateDirectory(path)`
+
+## DirectoryExist
+
+* Check if a directory exist and return true or false
+
+`DirectoryExist(path)`
+
+## ReadFile
+
+* Return text of a file
+
+`ReadFile(path)`
+
+## WriteFile
+
+* Return true if could write to file; mode is optional
+
+`WriteFile(text, path, mode)`
+
+## FileExist
+
+* Return true if file exists
+
+`FileExist(path)`
+
+## DeleteFile
+
+* Return true if file is succesfully deleted
+
+`DeleteFile(path)`
+
+## GetFileSize
+
+* Return the size of a file
+
+`GetFileSize(path)`
+
+## DelayAction
+
+* Delays a function call
+- Delay is in seconds
+
+`DelayAction(func, delay, args)`
+
+## EnableOverlay
+
+* Enable overlay
+
+`EnableOverlay()`
+
+## DisableOverlay
+
+* Disable overlay
+
+`DisableOverlay()`
+
+## CursorIsUnder
+
+* return if cursor is under a rectangle
+
+`CursorIsUnder(x, y, sizeX, sizeY)`
 
 ## createSprite
 
@@ -158,4 +269,28 @@ end
 
 `WorldToScreen(D3DXVECTOR3)`
 
+## ValidTarget
+
+* Return true if the target is valid
+
+`ValidTarget(object, distance, enemyTeam)`
+
+## BuffIsValid
+
+* Return true if the buff is valid
+
+`BuffIsValid(buff)`
+
+## TargetHaveBuff
+
+* Return if target have buff
+
+`TargetHaveBuff(buffName, target)`
+
+## CountEnemyHeroInRange
+
+* return number of enemy in range
+* object is optional
+
+`CountEnemyHeroInRange(range, object)`
 
