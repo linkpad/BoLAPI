@@ -109,6 +109,46 @@ end
 
 `DrawCircle(x, y, z, size, RGB)`
 
+## DrawRectangleOutline
+
+`DrawRectangleOutline(x, y, width, height, color, borderWidth)`
+
+## DrawLineBorder3D
+
+`DrawLineBorder3D(x1, y1, z1, x2, y2, z2, size, color, width)`
+
+## DrawLineBorder
+
+`DrawLineBorder(x1, y1, x2, y2, size, color, width)`
+
+## DrawCircleMinimap
+
+`DrawCircleMinimap(x, y, z, radius, width, color, quality)`
+
+## DrawCircle2D
+
+`DrawCircle2D(x, y, radius, width, color, quality)`
+
+## DrawCircle3D
+
+`DrawCircle3D(x, y, z, radius, width, color, quality)`
+
+## DrawLine3D
+
+`DrawLine3D(x1, y1, z1, x2, y2, z2, width, color)`
+
+## DrawLines3D
+
+`DrawLines3D(points, width, color)`
+
+## DrawTextA
+
+`DrawTextA(text, size, x, y, color, halign, valign)`
+
+## DrawText3D
+
+`(text, x, y, z, size, color, center)`
+
 ## GetMyHero
 
 * Return your Player as unit
