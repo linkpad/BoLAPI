@@ -11,6 +11,7 @@ toc_footers:
 includes:
   - callbacks
   - globals
+  - vector
   - unit
   - sprites
   - spell
