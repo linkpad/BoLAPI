@@ -480,6 +480,46 @@
 
 <p><code class="prettyprint">DrawCircle(x, y, z, size, RGB)</code></p>
 
+<h2 id="drawrectangleoutline">DrawRectangleOutline</h2>
+
+<p><code class="prettyprint">DrawRectangleOutline(x, y, width, height, color, borderWidth)</code></p>
+
+<h2 id="drawlineborder3d">DrawLineBorder3D</h2>
+
+<p><code class="prettyprint">DrawLineBorder3D(x1, y1, z1, x2, y2, z2, size, color, width)</code></p>
+
+<h2 id="drawlineborder">DrawLineBorder</h2>
+
+<p><code class="prettyprint">DrawLineBorder(x1, y1, x2, y2, size, color, width)</code></p>
+
+<h2 id="drawcircleminimap">DrawCircleMinimap</h2>
+
+<p><code class="prettyprint">DrawCircleMinimap(x, y, z, radius, width, color, quality)</code></p>
+
+<h2 id="drawcircle2d">DrawCircle2D</h2>
+
+<p><code class="prettyprint">DrawCircle2D(x, y, radius, width, color, quality)</code></p>
+
+<h2 id="drawcircle3d">DrawCircle3D</h2>
+
+<p><code class="prettyprint">DrawCircle3D(x, y, z, radius, width, color, quality)</code></p>
+
+<h2 id="drawline3d">DrawLine3D</h2>
+
+<p><code class="prettyprint">DrawLine3D(x1, y1, z1, x2, y2, z2, width, color)</code></p>
+
+<h2 id="drawlines3d">DrawLines3D</h2>
+
+<p><code class="prettyprint">DrawLines3D(points, width, color)</code></p>
+
+<h2 id="drawtexta">DrawTextA</h2>
+
+<p><code class="prettyprint">DrawTextA(text, size, x, y, color, halign, valign)</code></p>
+
+<h2 id="drawtext3d">DrawText3D</h2>
+
+<p><code class="prettyprint">(text, x, y, z, size, color, center)</code></p>
+
 <h2 id="getmyhero">GetMyHero</h2>
 
 <ul>
@@ -720,6 +760,216 @@
 </ul>
 
 <p><code class="prettyprint">CountEnemyHeroInRange(range, object)</code></p>
+
+          <h1 id="vector-functions">Vector Functions</h1>
+
+<h2 id="vectortype">VectorType</h2>
+
+<ul>
+<li>Return if as vector</li>
+</ul>
+
+<p><code class="prettyprint">VectorType(v)</code></p>
+
+<h2 id="vectorintersection">VectorIntersection</h2>
+
+<ul>
+<li>Return the Intersection of 2 lines</li>
+</ul>
+
+<p><code class="prettyprint">VectorIntersection(a1,b1,a2,b2)</code></p>
+
+<h2 id="islinesegmentintersection">IsLineSegmentIntersection</h2>
+
+<ul>
+<li>Return if 2 linesegments intersect</li>
+</ul>
+
+<p><code class="prettyprint">IsLineSegmentIntersection(A,B,C,D)</code></p>
+
+<h2 id="linesegmentintersection">LineSegmentIntersection</h2>
+
+<ul>
+<li>Return the Intersection of 2 linesegments</li>
+</ul>
+
+<p><code class="prettyprint">LineSegmentIntersection(A,B,C,D)</code></p>
+
+<h2 id="vectordirection">VectorDirection</h2>
+
+<p><code class="prettyprint">VectorDirection(v1,v2,v)</code></p>
+
+<h2 id="vectorpointprojectiononline">VectorPointProjectionOnLine</h2>
+
+<ul>
+<li>Return a vector on line v1-v2 closest to v</li>
+</ul>
+
+<p><code class="prettyprint">VectorPointProjectionOnLine(v1, v2, v)</code></p>
+
+<h2 id="vector">Vector</h2>
+
+<ul>
+<li>Return a vector from x,y,z pos or from another vector</li>
+</ul>
+
+<p><code class="prettyprint">Vector(a,b,c)</code></p>
+
+<h1 id="vector-methods">Vector Methods</h1>
+
+<h2 id="vector-clone">vector:clone</h2>
+
+<ul>
+<li>Return a new Vector from vector</li>
+</ul>
+
+<p><code class="prettyprint">vector:clone()</code></p>
+
+<h2 id="vector-unpack">vector:unpack</h2>
+
+<p><code class="prettyprint">vector:unpack()</code></p>
+
+<h2 id="vector-len2">vector:len2</h2>
+
+<ul>
+<li>Return vector^2</li>
+</ul>
+
+<p><code class="prettyprint">vector:len2()</code></p>
+
+<ul>
+<li>Return vector^v</li>
+</ul>
+
+<p><code class="prettyprint">vector:len2(v)</code></p>
+
+<h2 id="vector-len">vector:len</h2>
+
+<ul>
+<li>Return vector length</li>
+</ul>
+
+<p><code class="prettyprint">vector:len()</code></p>
+
+<h2 id="vector-dist">vector:dist</h2>
+
+<ul>
+<li>distance between 2 vectors (v and vector)</li>
+</ul>
+
+<p><code class="prettyprint">vector:dist(v)</code></p>
+
+<h2 id="vector-normalize">vector:normalize</h2>
+
+<ul>
+<li>Normalize vector</li>
+</ul>
+
+<p><code class="prettyprint">vector:normalize()</code></p>
+
+<h2 id="vector-normalized">vector:normalized</h2>
+
+<ul>
+<li>return a new Vector normalize from vector</li>
+</ul>
+
+<p><code class="prettyprint">vector:normalized()</code></p>
+
+<h2 id="vector-rotate">vector:rotate</h2>
+
+<ul>
+<li>Rotate the vector by phi angle</li>
+</ul>
+
+<p><code class="prettyprint">vector:rotate(phiX, phiY, phiZ)</code></p>
+
+<h2 id="vector-rotated">vector:rotated</h2>
+
+<ul>
+<li>Return a new Vector rotate from vector by phi angle</li>
+</ul>
+
+<p><code class="prettyprint">vector:rotated(phiX, phiY, phiZ)</code></p>
+
+<h2 id="vector-projecton">vector:projectOn</h2>
+
+<ul>
+<li>Return a new Vector from vector projected on v</li>
+</ul>
+
+<p><code class="prettyprint">vector:projectOn(v)</code></p>
+
+<h2 id="vector-mirroron">vector:mirrorOn</h2>
+
+<ul>
+<li>Return a new Vector from vector mirrored on v</li>
+</ul>
+
+<p><code class="prettyprint">vector:mirrorOn(v)</code></p>
+
+<h2 id="vector-center">vector:center</h2>
+
+<ul>
+<li>Return center between vector and v</li>
+</ul>
+
+<p><code class="prettyprint">vector:center(v)</code></p>
+
+<h2 id="vector-crossp">vector:crossP</h2>
+
+<ul>
+<li>Return cross product of vector</li>
+</ul>
+
+<p><code class="prettyprint">vector:crossP()</code></p>
+
+<h2 id="vector-dotp">vector:dotP</h2>
+
+<ul>
+<li>Return dot product of vector</li>
+</ul>
+
+<p><code class="prettyprint">vector:dotP()</code></p>
+
+<h2 id="vector-polar">vector:polar</h2>
+
+<ul>
+<li>Return the angle from axe</li>
+</ul>
+
+<p><code class="prettyprint">vector:polar()</code></p>
+
+<h2 id="vector-anglebetween">vector:angleBetween</h2>
+
+<ul>
+<li>Return the angle formed from vector to v1,v2</li>
+</ul>
+
+<p><code class="prettyprint">vector:angleBetween(v1, v2)</code></p>
+
+<h2 id="vector-compare">vector:compare</h2>
+
+<ul>
+<li>Compare vector and v</li>
+</ul>
+
+<p><code class="prettyprint">vector:compare(v)</code></p>
+
+<h2 id="vector-perpendicular">vector:perpendicular</h2>
+
+<ul>
+<li>Return new Vector rotated 90° right</li>
+</ul>
+
+<p><code class="prettyprint">vector:perpendicular()</code></p>
+
+<h2 id="vector-perpendicular2">vector:perpendicular2</h2>
+
+<ul>
+<li>Return new Vector rotated 90° left</li>
+</ul>
+
+<p><code class="prettyprint">vector:perpendicular2()</code></p>
 
           <h1 id="unit-members">Unit Members</h1>
 
