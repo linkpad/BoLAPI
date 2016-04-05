@@ -126,6 +126,24 @@
 ## unit.isNoRender
 ## unit.isFleeing
 ## unit.isForceRenderParticles
+## unit.spellOwner
+
+``` lua
+function OnCreateObj(object)
+	if object and object.valid and object.type and object.type == "missile" then
+		local Vector2String = function(vInp) return "<" .. tostring(vInp.x) .. ", " .. tostring(vInp.y) .. ", " .. tostring(vInp.z) .. ">" end
+		local uSpellOwner = object.spellOwner
+		local vSpellEnd = object.spellEnd
+		local vSpellStart = object.spellStart
+		local szSpellName = object.spellName
+		print(uSpellOwner.charName .. "[" .. szSpellName .. "]: " .. Vector2String(vSpellStart) .. " -[" .. tostring(GetDistance(vSpellStart, vSpellEnd)) .. "]> " .. Vector2String(vSpellEnd)
+	end
+end
+```
+
+## unit.spellEnd
+## unit.spellStart
+## unit.spellName
 
 # Unit Methods
 
