@@ -396,6 +396,18 @@
 
 <p><code class="prettyprint">CastSpell(iSpell, target)</code></p>
 
+<h2 id="castspell2">CastSpell2</h2>
+
+<ul>
+<li>Cast a secondary spell</li>
+</ul>
+
+<p><code class="prettyprint">CastSpell2(iSlot, D3DXVECTOR3)</code></p>
+
+<h2 id="castspell3">CastSpell3</h2>
+
+<p><code class="prettyprint">CastSpell3(iSlot, D3DXVECTOR3, D3DXVECTOR3)</code></p>
+
 <h2 id="levelspell">LevelSpell</h2>
 
 <ul>
@@ -403,6 +415,14 @@
 </ul>
 
 <p><code class="prettyprint">LevelSpell(iSpell)</code></p>
+
+<h2 id="setskin">SetSkin</h2>
+
+<p><code class="prettyprint">SetSkin(unit,skinID)</code></p>
+
+<h2 id="calculatepath">CalculatePath</h2>
+
+<p><code class="prettyprint">CalculatePath(unit,D3DXVECTOR3)</code></p>
 
 <h2 id="print">print</h2>
 
@@ -435,6 +455,14 @@
 </ul>
 
 <p><code class="prettyprint">BlockChat()</code></p>
+
+<h2 id="gettextarea">GetTextArea</h2>
+
+<ul>
+<li>Return the text width and height</li>
+</ul>
+
+<p><code class="prettyprint">GetTextArea(string,fontSize)</code></p>
 
 <h2 id="drawtext">DrawText</h2>
 
@@ -1186,6 +1214,25 @@
 <h2 id="unit-isfleeing">unit.isFleeing</h2>
 
 <h2 id="unit-isforcerenderparticles">unit.isForceRenderParticles</h2>
+
+<h2 id="unit-spellowner">unit.spellOwner</h2>
+<pre class="highlight lua"><code><span class="k">function</span> <span class="nf">OnCreateObj</span><span class="p">(</span><span class="n">object</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">object</span> <span class="ow">and</span> <span class="n">object</span><span class="p">.</span><span class="n">valid</span> <span class="ow">and</span> <span class="n">object</span><span class="p">.</span><span class="n">type</span> <span class="ow">and</span> <span class="n">object</span><span class="p">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">"missile"</span> <span class="k">then</span>
+        <span class="kd">local</span> <span class="n">Vector2String</span> <span class="o">=</span> <span class="k">function</span><span class="p">(</span><span class="n">vInp</span><span class="p">)</span> <span class="k">return</span> <span class="s2">"&lt;"</span> <span class="o">..</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">vInp</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="o">..</span> <span class="s2">", "</span> <span class="o">..</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">vInp</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="o">..</span> <span class="s2">", "</span> <span class="o">..</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">vInp</span><span class="p">.</span><span class="n">z</span><span class="p">)</span> <span class="o">..</span> <span class="s2">"&gt;"</span> <span class="k">end</span>
+        <span class="kd">local</span> <span class="n">uSpellOwner</span> <span class="o">=</span> <span class="n">object</span><span class="p">.</span><span class="n">spellOwner</span>
+        <span class="kd">local</span> <span class="n">vSpellEnd</span> <span class="o">=</span> <span class="n">object</span><span class="p">.</span><span class="n">spellEnd</span>
+        <span class="kd">local</span> <span class="n">vSpellStart</span> <span class="o">=</span> <span class="n">object</span><span class="p">.</span><span class="n">spellStart</span>
+        <span class="kd">local</span> <span class="n">szSpellName</span> <span class="o">=</span> <span class="n">object</span><span class="p">.</span><span class="n">spellName</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">uSpellOwner</span><span class="p">.</span><span class="n">charName</span> <span class="o">..</span> <span class="s2">"["</span> <span class="o">..</span> <span class="n">szSpellName</span> <span class="o">..</span> <span class="s2">"]: "</span> <span class="o">..</span> <span class="n">Vector2String</span><span class="p">(</span><span class="n">vSpellStart</span><span class="p">)</span> <span class="o">..</span> <span class="s2">" -["</span> <span class="o">..</span> <span class="nb">tostring</span><span class="p">(</span><span class="n">GetDistance</span><span class="p">(</span><span class="n">vSpellStart</span><span class="p">,</span> <span class="n">vSpellEnd</span><span class="p">))</span> <span class="o">..</span> <span class="s2">"]&gt; "</span> <span class="o">..</span> <span class="n">Vector2String</span><span class="p">(</span><span class="n">vSpellEnd</span><span class="p">)</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+
+<h2 id="unit-spellend">unit.spellEnd</h2>
+
+<h2 id="unit-spellstart">unit.spellStart</h2>
+
+<h2 id="unit-spellname">unit.spellName</h2>
 
 <h1 id="unit-methods">Unit Methods</h1>
 
