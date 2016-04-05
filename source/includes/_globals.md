@@ -37,11 +37,29 @@ Uses Spell or Item at Target Position :
 
 `CastSpell(iSpell, target)`
 
+## CastSpell2
+
+* Cast a secondary spell
+
+`CastSpell2(iSlot, D3DXVECTOR3)`
+
+## CastSpell3
+
+`CastSpell3(iSlot, D3DXVECTOR3, D3DXVECTOR3)`
+
 ## LevelSpell
 
 * Level Up a Spell
 
 `LevelSpell(iSpell)`
+
+## SetSkin
+
+`SetSkin(unit,skinID)`
+
+## CalculatePath
+
+`CalculatePath(unit,D3DXVECTOR3)`
 
 ## print
 
@@ -66,6 +84,12 @@ Uses Spell or Item at Target Position :
 * Block last chat message.
 
 `BlockChat()`
+
+## GetTextArea
+
+* Return the text width and height
+
+`GetTextArea(string,fontSize)`
 
 ## DrawText
 
